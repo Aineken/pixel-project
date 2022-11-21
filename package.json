@@ -10,9 +10,20 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-macros": "^3.1.0",
+    "postcss-cli": "^10.0.0",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "react-responsive": "^9.0.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.8",
+    "styled-components": "^5.3.6",
+    "tailwind.macro": "^1.0.0-alpha.10",
+    "twin.macro": "^3.0.1",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
   },
@@ -21,6 +32,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./tailwind.config.js",
+      "preset": "styled-components"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +56,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
   }
 }
