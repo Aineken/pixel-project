@@ -3,7 +3,13 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "/public/index.html"],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      color: {
+        "dark-blue": {
+          500: "#212526",
+        },
+      },
+    },
     screens: {
       sm: "640px",
       md: "768px",

@@ -17,23 +17,24 @@ const Container = styled.div`
         pr-6
         pt-4
         border-b-2
-        border-gray-200
-        border-opacity-50
+        border-green-200
         items-center
         self-center
+        
 `}
 `;
 
 const NavItems = styled.ul`
   ${tw`
     list-none
-    w-full
+    w-auto
     h-auto
     lg:w-auto
     lg:h-full
     flex
     lg:ml-20
     justify-center
+    lg:justify-around
     items-center
 `}
 `;
@@ -52,10 +53,11 @@ text-lg
 lg:text-base
 transition-colors
 [transition-duration:300ms]
-hover:text-gray-300
+hover:text-gray-200
 box-border
 mb-2
-lg:mb-0`}
+lg:mb-0
+`}
 `;
 
 export default function Navbar() {
