@@ -14,7 +14,7 @@ import IceTeaImg from "../../images/ice-tea.jpg";
 
 const ExploreSectionContainer = tw(Element)`
     w-full
-    h-screen
+    h-full
     flex
     flex-col
     relative
@@ -98,7 +98,7 @@ const Description = tw.p`
     absolute
 `;
 
-export function ExploreSection() {
+export default function ExploreSection() {
   return (
     <ExploreSectionContainer name="Explore">
       <Title>Explore Travel Places</Title>

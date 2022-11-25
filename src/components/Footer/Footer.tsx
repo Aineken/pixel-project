@@ -3,11 +3,13 @@ import { Link } from "react-scroll";
 import tw from "twin.macro";
 import Logo from "../Logo/Logo";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
+import styled from "styled-components";
+import { Element } from "react-scroll";
 
-const FooterContainer = tw.div`
+const FooterContainer = tw(Element)`
     w-full
     h-96
-    bg-amber-200
+    bg-dark-blue-500
     mt-10
     flex
     pt-6
@@ -33,13 +35,16 @@ const Wrapper = tw.div`
 
 const TopSection = tw.div`
     flex
-    w-full
+    [width: 90%]
     justify-center
     lg:justify-start
+    mr-3
+    lg:ml-5
+    lg:mr-16
 `;
 
 const InnerContainer = tw.div`
-    w-full
+    [width: 90%]
     flex
     flex-col
     lg:flex-row
@@ -94,28 +99,37 @@ const BottomSection = tw.div`
     flex
     flex-wrap
     items-center
-    justify-between
-    pl-4
-    pr-4
+    justify-around
+    px-1
     h-28
     lg:h-14
     bottom-0
     border-t
     border-t-gray-300
     border-opacity-50
+    [width: 90%]
 `;
 
 const Copyright = tw.span`
     [font-size:x-small]
     text-gray-300
-    w-full
+    w-auto
     lg:w-auto
     text-center
 `;
 
-const SmallText = tw.span`
-    [font-size:small]
+const SmallText = styled.span`
+  ${tw`
+  
+  [font-size:medium]
     text-gray-300
+  `}
+  a {
+    text-decoration: none;
+    ${tw`
+    text-gray-300
+    `}
+  }
 `;
 
 const SocialMedia = tw.div`
@@ -132,9 +146,9 @@ const Icon = tw.span`
     hover:text-gray-300
 `;
 
-export function Footer() {
+export default function Footer() {
   return (
-    <FooterContainer>
+    <FooterContainer name="Footer">
       <Wrapper>
         <TopSection>
           <Logo />
@@ -191,7 +205,8 @@ export function Footer() {
         </InnerContainer>
         <BottomSection>
           <Copyright>
-            © {new Date().getFullYear()} TRAVELYA. All rights reserved.
+            © {new Date().getFullYear()} Andrzul Web Studio. All rights
+            reserved.
           </Copyright>
           <SmallText>
             <a href="/">Terms of Service</a>

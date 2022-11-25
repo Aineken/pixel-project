@@ -51,6 +51,8 @@ const FloatingText = styled.h1`
         text-white
         [font-size:60px]
         [line-height:25px]
+        sm:[font-size: 90px]
+        sm:[line-height: 90px]
         lg:[font-size:125px]
         lg:[line-height:90px]
         2xl:[font-size:170px]
@@ -115,7 +117,10 @@ const ViewMoreButton = styled.button`
         transition-colors
         duration-200
         hover:text-green-400
+        
     `};
+  background: transparent;
+  border: 0;
 `;
 
 function HeroSection() {

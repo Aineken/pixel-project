@@ -11,7 +11,8 @@ import styles from "./menuStyles";
 const Container = styled.div`
   width: 90%;
   ${tw`
-        flex
+        flex 
+        
         h-20
         pl-6
         pr-6
@@ -21,42 +22,39 @@ const Container = styled.div`
         items-center
         self-center
         
-`}
+`};
 `;
-
 const NavItems = styled.ul`
   ${tw`
     list-none
-    w-auto
-    h-auto
-    lg:w-auto
-    lg:h-full
+    w-full
+    max-w-max
+    h-full
     flex
-    lg:ml-20
-    justify-center
-    lg:justify-around
+    justify-around
     items-center
 `}
 `;
 
 const NavItem = styled.li`
   ${tw`
-lg:mr-8
+mx-8
+lg:mx-4
+sm:mx-1
 flex
 items-center
-justify-center
-min-h-full
+max-w-max
 text-white
 cursor-pointer
 font-medium
-text-lg
-lg:text-base
+lg:font-medium
+text-xl
+lg:text-lg
 transition-colors
 [transition-duration:300ms]
 hover:text-gray-200
 box-border
-mb-2
-lg:mb-0
+
 `}
 `;
 
@@ -65,13 +63,24 @@ export default function Navbar() {
   const navItems = (
     <NavItems>
       <NavItem>
-        <Link to="Home">Home</Link>
+        <Link to="Home" smooth={"easeInOutQuad"} duration={1500}>
+          Home
+        </Link>
       </NavItem>
       <NavItem>
-        <Link to="Explore">Explore</Link>
+        <Link to="Explore" smooth={"easeInOutQuad"} duration={1500}>
+          Explore
+        </Link>
       </NavItem>
       <NavItem>
-        <Link to="travelPlaces">Travel Places</Link>
+        <Link to="travelPlaces" smooth={"easeInOutQuad"} duration={1500}>
+          Travel Places
+        </Link>
+      </NavItem>
+      <NavItem>
+        <Link to="Footer" smooth={"easeInOutQuad"} duration={1500}>
+          Contact
+        </Link>
       </NavItem>
     </NavItems>
   );
